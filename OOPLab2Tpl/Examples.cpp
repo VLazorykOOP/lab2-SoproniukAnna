@@ -159,10 +159,17 @@ cout << "An example of calculating an expression using only bitwise operations.\
 	
 	cin >> a >> b;
     auto st = cin.rdstate();
-	if (st != cin.goodbit) { cin.clear(); cout << " error \n"; cin.get(); cin.get(); return; }
+	if (st != cin.goodbit) 
+	{ 
+		cin.clear(); 
+		cout << " error \n"; 
+		cin.get(); 
+		cin.get(); 
+		return; 
+	}
 	x = a + (a << 5) + (((a << 4) - b - (b << 4)) >> 3) + (((b << 4) - b + 300) >> 7);
 	y = a * 33 + (a * 16 - b * 17) / 8 + (15 * b + 300) / 128;
-	cout << "  x=" << x << "  y=" << y << " a=" << a << "  b=" << b << endl;
+	cout << "  x = " << x << "  y = " << y << " a = " << a << "  b = " << b << endl;
 	cin.get();
 	cin.get();
 	return;
