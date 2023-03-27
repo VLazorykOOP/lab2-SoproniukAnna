@@ -83,7 +83,6 @@ void Examples()
 		case '2': Example2();   break;
 		case '3': Example3();   break;
 		case '4': Example4();   break;
-		case '5':  Example5();  break;
 		case '6': 
 		#if !defined(VS_CODE)
 		SetColor(White, Black); 
@@ -99,7 +98,7 @@ void Examples()
 	return ;
 }
 
-#include <clocale>
+
 // An example of converting an integer from the decimal system to binary  
 //  Приклад переводу цілого числа з десяткової системи в двійкову
 void Example1()
@@ -349,7 +348,8 @@ void Example4() {
 }
 
 
-void Example5() {
+/*void Example5() 
+{
 	char S[65];
 	TextCode Rez[64];
 	unsigned short i, f;
@@ -387,5 +387,5 @@ void Example5() {
 		cout << S << endl;
 	}
 	cin.get();
-
-}
+	
+}*/
