@@ -2,6 +2,7 @@
 #include <conio.h>
 #include "Tasks.h"
 #include "Examples.h"
+#include "TTask2.h"
 using namespace std;
 
 void task1() 
@@ -29,9 +30,15 @@ void task1()
 
 void task2()
 {
+    TEncryption encrypt;
     // Шифрування даних з використання побітових операцій 
     // Data encryption using bitwise operations
     cout << " Data encryption using bitwise operations " << endl;
+    encrypt.InputTextConsole();
+    encrypt.PrintText();
+    encrypt.Encrypt();
+    encrypt.PrintCript();
+
 }
 
 void task3()

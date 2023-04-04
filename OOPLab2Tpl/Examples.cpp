@@ -287,17 +287,21 @@ int MyDecryption(char OutS[64], unsigned short InCoding[64]) {
 *
 */
 
-void Example3() {
+void Example3() 
+{
 	char S[65];
 	unsigned short Rez[64];
 	unsigned short i, f;
 	cout << " Input string from file press 1 <Enter>\n ";
 	cin >> f;
-	if (f == 1) {
+	if (f == 1) 
+	{
 			ifstream ifs("in.txt");
-			if (!ifs) {
+			if (!ifs)
+			{
 				cout << "File in.txt not open" << endl; f = 2;
-				}
+			}
+
 				else {
 				ifs.get(S, 64);
 				ifs.close();
