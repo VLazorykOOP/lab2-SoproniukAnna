@@ -1,5 +1,7 @@
 #include "TTask2.h"
 #include <iostream>
+#include <fstream>
+
 
 unsigned short TEncryption::pbit(unsigned char c)
 {
@@ -39,7 +41,7 @@ TEncryption::~TEncryption(){}
 void TEncryption::InputTextConsole()
 {
 	std::cin.ignore(1,'\0');
-	std::cout << "Input matrix:" << std::endl;
+	std::cout << "Input text:" << std::endl;
 	for (int i = 0; i < CountRow; i++)
 	{
 		std::cin.getline(this->text[i], CountCol);
@@ -59,7 +61,6 @@ void TEncryption::InputTextConsole()
 
 void TEncryption::InputTextFromFile()
 {
-
 }
 
 void TEncryption::SaveCriptToFile()
@@ -100,13 +101,13 @@ void TEncryption::Encrypt()
 		{
 			tmp = this->pbit(this->text[i][j]);
 			tmp <<= 1;
-//			tmp |= this->pbit(i, j);
+			tmp |= this->pbit(i, j);
 			tmp <<= 4;
 			tmp |= this->text[i][j] >> 4;
 			tmp <<= 4;
-//			tmp |= j;
+			tmp |= j;
 			tmp <<= 2;
-//			tmp |= i;
+			tmp |= i;
 			tmp <<= 4;
 			tmp |= this->text[i][j] & 15;
 			this->cript[i * CountCol + j] = tmp;

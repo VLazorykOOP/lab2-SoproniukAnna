@@ -5,6 +5,45 @@
 #include "TTask2.h"
 using namespace std;
 
+void MenuTask2()
+{
+    int select;
+    do
+    {
+        TEncryption encrypt;
+        cout << "\t \t \t Select option " << endl;
+        cout << " 1.  Console " << endl;
+        cout << " 2.  File " << endl;
+        cout << " 0.  Exit " << endl;
+        cin >> select;
+        system("cls");
+        switch (select)
+        {
+        case 1:
+            system("cls");
+            encrypt.InputTextConsole();
+            encrypt.PrintText();
+            encrypt.Encrypt();
+            encrypt.PrintCript();
+            break;
+        case 2:
+            encrypt.InputTextFromFile();
+            encrypt.PrintText();
+            encrypt.Encrypt();
+            encrypt.SaveCriptToFile();
+            encrypt.PrintCript();
+            break;
+            //case 3:
+              //  task3();
+                //break;
+            //case 4:
+              //  task4();
+                //break;
+        }
+    } while (select != 0);
+    system("cls");
+}
+
 void task1() 
 {
     // Обчислення виразів з використанням побітових операцій
@@ -30,15 +69,10 @@ void task1()
 
 void task2()
 {
-    TEncryption encrypt;
     // Шифрування даних з використання побітових операцій 
     // Data encryption using bitwise operations
-    cout << " Data encryption using bitwise operations " << endl;
-    encrypt.InputTextConsole();
-    encrypt.PrintText();
-    encrypt.Encrypt();
-    encrypt.PrintCript();
-
+    system("cls");
+    MenuTask2();
 }
 
 void task3()
