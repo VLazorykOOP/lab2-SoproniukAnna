@@ -11,9 +11,10 @@ void MenuTask2()
     do
     {
         TEncryption encrypt;
+        TDecryption decrypt;
         cout << "\t \t \t Select option " << endl;
-        cout << " 1.  Console " << endl;
-        cout << " 2.  File " << endl;
+        cout << " 1.  Encrypt " << endl;
+        cout << " 2.  Decryption " << endl;
         cout << " 0.  Exit " << endl;
         cin >> select;
         system("cls");
@@ -25,20 +26,15 @@ void MenuTask2()
             encrypt.PrintText();
             encrypt.Encrypt();
             encrypt.PrintCript();
+            encrypt.SaveCriptToFile();
             break;
         case 2:
-            encrypt.InputTextFromFile();
-            encrypt.PrintText();
-            encrypt.Encrypt();
-            encrypt.SaveCriptToFile();
-            encrypt.PrintCript();
+            //system("cls");
+            decrypt.InputCriptFromFile();
+            decrypt.Decrypt();
+            decrypt.PrintDecrypt();
+            decrypt.SaveDecriptToFile();
             break;
-            //case 3:
-              //  task3();
-                //break;
-            //case 4:
-              //  task4();
-                //break;
         }
     } while (select != 0);
     system("cls");
@@ -73,19 +69,6 @@ void task2()
     // Data encryption using bitwise operations
     system("cls");
     MenuTask2();
-}
-
-void task3()
-{
-    // Шифрування даних з використання стуктур з бітовими полями 
-    // Data encryption using structures with bit fields
-    cout << "  Data encryption using structures with bit fields " << endl;
-}
-
-void task4()
-{   // Задача із використання побітових операцій
-    // The problem of using bitwise operations
-    cout << " Data encryption using structures with bit fields " << endl;
 }
 
 

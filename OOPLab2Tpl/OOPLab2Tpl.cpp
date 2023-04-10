@@ -31,12 +31,6 @@ void MainMenu()
         case 2:
             task2();
             break;
-        //case 3:
-          //  task3();
-            //break;
-        //case 4:
-          //  task4();
-            //break;
         }
     } while (select != 0);
     system("cls");

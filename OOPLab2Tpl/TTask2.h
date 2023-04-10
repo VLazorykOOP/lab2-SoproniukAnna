@@ -15,11 +15,22 @@ public:
 	TEncryption();
 	~TEncryption();
 	void InputTextConsole();
-	void InputTextFromFile();
 	void SaveCriptToFile();
 	void PrintText();
 	void PrintCript();
 	void Encrypt();
 };
 
-// TDecryption
+class TDecryption
+{
+private:
+	unsigned short cript[CountRow * CountCol]{};
+	char text[CountRow][CountCol]{};
+public:
+	TDecryption();
+	~TDecryption();
+	void InputCriptFromFile();
+	void PrintDecrypt();
+	void SaveDecriptToFile();
+	void Decrypt();
+};
