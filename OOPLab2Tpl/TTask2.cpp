@@ -118,6 +118,9 @@ void TEncryption::Encrypt()
 
 
 
+
+
+
 TDecryption::TDecryption(){}
 
 TDecryption::~TDecryption(){}
@@ -167,6 +170,7 @@ void TDecryption::Decrypt()
 		for (unsigned short j = 0; j < CountCol; j++)
 		{
 			unsigned short tmp = this->cript[i * CountCol + j];
-			this->text[i][j] = (((tmp >> 10) & 15) <<4) | tmp & 15;
+			this->text[i][j] = ((
+				(tmp >> 10) & 15) <<4) | tmp & 15;
 		}
 }

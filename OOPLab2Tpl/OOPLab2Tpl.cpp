@@ -19,8 +19,6 @@ void MainMenu()
         cout << "\t \t \t Main menu " << endl;
         cout << " 1.  Calculation of expressions using bitwise operations " << endl;
         cout << " 2.  Data encryption using bitwise operations " << endl;
-        //cout << " 3.  Data encryption using structures with bit fields " << endl;
-        //cout << " 4.  The problem of using bitwise operations " << endl;
         cout << " 0.  Exit " << endl;
         cin >> select;
         switch (select)
